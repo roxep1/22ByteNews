@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.airbnb.mvrx.compose.mavericksActivityViewModel
 import com.bashkir.a22bytenews.ui.screens.NewsScreen
 import com.bashkir.a22bytenews.ui.theme.ByteNewsTheme
 
@@ -23,17 +24,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    NewsScreen()
+                    NewsScreen(mavericksActivityViewModel())
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    ByteNewsTheme {
-        NewsScreen()
     }
 }

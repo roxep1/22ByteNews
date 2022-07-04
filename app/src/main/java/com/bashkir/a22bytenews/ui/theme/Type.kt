@@ -1,9 +1,12 @@
 package com.bashkir.a22bytenews.ui.theme
 
 import androidx.compose.material.Typography
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
@@ -25,4 +28,26 @@ val Typography = Typography(
         fontSize = 12.sp
     )
     */
+)
+
+val placeHolderText = TextStyle(
+    fontSize = normalTextSize,
+    fontStyle = FontStyle.Italic,
+    color = Color.Gray
+)
+
+val normalText = TextStyle(
+    fontSize = normalTextSize,
+    textAlign = TextAlign.Justify
+)
+
+val titleText = TextStyle(
+    fontSize = titleTextSize,
+    fontWeight = FontWeight.Bold,
+    textAlign = TextAlign.Start
+)
+
+val graySmallText = TextStyle(
+    color = Color.Gray,
+    fontSize = smallText
 )
